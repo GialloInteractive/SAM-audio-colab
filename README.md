@@ -44,3 +44,14 @@ This notebook is based on:
 
 - [facebookresearch/sam-audio](https://github.com/facebookresearch/sam-audio)
 - [SAM-Audio models on Hugging Face](https://huggingface.co/collections/facebook/sam-audio)
+
+## License
+
+The original notebook and documentation in this repository are licensed under
+the [MIT License](LICENSE).
+
+SAM-Audio itself, including model code and checkpoints cloned or downloaded at
+runtime, is developed by Meta/Facebook Research and licensed separately under
+the SAM License. Users must request checkpoint access on Hugging Face and comply
+with the applicable SAM-Audio license terms. See
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for details.
