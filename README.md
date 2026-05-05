@@ -1,6 +1,6 @@
 # SAM-Audio Colab
 
-[Apri in Google Colab](https://colab.research.google.com/github/GialloInteractive/SAM-audio-colab/blob/main/SAM_Audio_Colab.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GialloInteractive/SAM-audio-colab/blob/main/SAM_Audio_Colab.ipynb)
 
 Notebook Google Colab per usare SAM-Audio di Meta/Facebook Research e separare sorgenti audio tramite prompt testuale.
 
