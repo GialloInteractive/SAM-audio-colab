@@ -2,45 +2,45 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GialloInteractive/SAM-audio-colab/blob/main/SAM_Audio_Colab.ipynb)
 
-Notebook Google Colab per usare SAM-Audio di Meta/Facebook Research e separare sorgenti audio tramite prompt testuale.
+Google Colab notebook for using Meta/Facebook Research SAM-Audio to separate audio sources with a text prompt.
 
-## Cosa fa
+## What It Does
 
-- Installa SAM-Audio in modo idempotente su Colab.
-- Autentica Hugging Face tramite token interattivo o Colab Secret `HF_TOKEN`.
-- Carica un modello SAM-Audio in modalita' leggera per ridurre la VRAM.
-- Supporta upload diretto o file da Google Drive.
-- Divide automaticamente audio lunghi in chunk gestibili.
-- Esporta target isolato, residuo e archivio zip dei risultati.
+- Installs SAM-Audio idempotently on Colab.
+- Authenticates Hugging Face through an interactive token prompt or Colab Secret `HF_TOKEN`.
+- Loads a SAM-Audio model in lightweight mode to reduce VRAM usage.
+- Supports direct upload or files from Google Drive.
+- Automatically splits long audio into manageable chunks.
+- Exports the isolated target, residual audio, and a zip archive of the results.
 
-## Requisiti
+## Requirements
 
-- Runtime Google Colab con GPU, preferibilmente T4 o superiore.
-- Token Hugging Face con accesso approvato ai checkpoint SAM-Audio.
-- File audio supportato da `torchaudio`.
+- Google Colab runtime with GPU, preferably T4 or better.
+- Hugging Face token with approved access to the SAM-Audio checkpoints.
+- Audio file supported by `torchaudio`.
 
-## Uso rapido
+## Quick Start
 
-1. Apri `SAM_Audio_Colab.ipynb` in Colab.
-2. Seleziona `Runtime > Change runtime type > GPU`.
-3. Esegui le celle dall'alto verso il basso.
-4. Inserisci un prompt semplice e in inglese, per esempio `man speaking`, `drums`, `guitar`.
-5. Scarica il target isolato, il residuo o lo zip finale.
+1. Open `SAM_Audio_Colab.ipynb` in Colab.
+2. Select `Runtime > Change runtime type > GPU`.
+3. Run the cells from top to bottom.
+4. Enter a simple English prompt, for example `man speaking`, `drums`, `guitar`.
+5. Download the isolated target, the residual audio, or the final zip archive.
 
-## Note operative
+## Operational Notes
 
-Il notebook usa impostazioni conservative per essere stabile su Colab:
+The notebook uses conservative settings to stay stable on Colab:
 
 - `reranking_candidates=1`
 - `predict_spans=False`
-- modello predefinito `facebook/sam-audio-base`
-- chunk predefiniti da 30 secondi
+- default model `facebook/sam-audio-base`
+- default chunks of 30 seconds
 
-Se compare un errore di memoria GPU, abbassa `CHUNK_SECONDS` a 10 o 20 oppure passa a `facebook/sam-audio-small`.
+If you get a GPU memory error, lower `CHUNK_SECONDS` to 10 or 20, or switch to `facebook/sam-audio-small`.
 
-## Repository upstream
+## Upstream Repository
 
-Questo notebook si basa su:
+This notebook is based on:
 
 - [facebookresearch/sam-audio](https://github.com/facebookresearch/sam-audio)
-- [Modelli SAM-Audio su Hugging Face](https://huggingface.co/collections/facebook/sam-audio)
+- [SAM-Audio models on Hugging Face](https://huggingface.co/collections/facebook/sam-audio)
