@@ -1,0 +1,29 @@
+# Local assistant/tooling configuration
+.claude/
+.codex/
+
+# Python and notebook caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Colab/audio outputs
+sam-audio/
+sam_audio_input/
+sam_audio_chunks/
+sam_audio_outputs/
+chunk_*.wav
+target*.wav
+residual*.wav
+*_sam_audio_results.zip
+targets.zip
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
