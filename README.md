@@ -17,16 +17,20 @@ Google Colab notebook for using Meta/Facebook Research SAM-Audio to separate aud
 
 - Google Colab runtime with GPU. The default small model is recommended on T4;
   A100/L4-class GPUs are recommended for base or large.
-- Hugging Face token with approved access to the SAM-Audio checkpoints.
+- Hugging Face token with approved access to the selected SAM-Audio checkpoint.
+  Each gated model repo, including `facebook/sam-audio-small`, may require
+  accepting/requesting access while logged in on Hugging Face.
 - Audio file supported by `torchaudio`.
 
 ## Quick Start
 
 1. Open `SAM_Audio_Colab.ipynb` in Colab.
 2. Select `Runtime > Change runtime type > GPU`.
-3. Run the cells from top to bottom.
-4. Enter a simple English prompt, for example `man speaking`, `drums`, `guitar`.
-5. Download the isolated target, the residual audio, or the final zip archive.
+3. Open the selected model page on Hugging Face, accept/request access, and use
+   a Hugging Face token in cell 2.
+4. Run the cells from top to bottom.
+5. Enter a simple English prompt, for example `man speaking`, `drums`, `guitar`.
+6. Download the isolated target, the residual audio, or the final zip archive.
 
 ## Operational Notes
 
