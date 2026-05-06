@@ -15,7 +15,8 @@ Google Colab notebook for using Meta/Facebook Research SAM-Audio to separate aud
 
 ## Requirements
 
-- Google Colab runtime with GPU, preferably T4 or better.
+- Google Colab runtime with GPU. A100/L4-class GPUs are recommended for the
+  default base model; on T4, use the small model and shorter chunks.
 - Hugging Face token with approved access to the SAM-Audio checkpoints.
 - Audio file supported by `torchaudio`.
 
@@ -35,8 +36,12 @@ The notebook uses conservative settings to stay stable on Colab:
 - `predict_spans=False`
 - default model `facebook/sam-audio-base`
 - default chunks of 30 seconds
+- low-CPU-memory checkpoint loading enabled by default
 
-If you get a GPU memory error, lower `CHUNK_SECONDS` to 10 or 20, or switch to `facebook/sam-audio-small`.
+If model loading consumes all system RAM, keep `LOW_CPU_MEMORY_LOAD=True` in
+cell 4 on A100/L4-class runtimes. If you get a GPU memory error instead, lower
+`CHUNK_SECONDS` to 10 or 20, disable `LOW_CPU_MEMORY_LOAD`, or switch to
+`facebook/sam-audio-small`.
 
 ## Upstream Repository
 
