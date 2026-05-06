@@ -27,7 +27,7 @@ Google Colab notebook for using Meta/Facebook Research SAM-Audio to separate aud
 1. Open `SAM_Audio_Colab.ipynb` in Colab.
 2. Select `Runtime > Change runtime type > GPU`.
 3. Open the selected model page on Hugging Face, accept/request access, and use
-   a Hugging Face read token in cell 2.
+   a Hugging Face token in cell 2.
 4. Run the cells from top to bottom.
 5. Enter a simple English prompt, for example `man speaking`, `drums`, `guitar`.
 6. Download the isolated target, the residual audio, or the final zip archive.
@@ -47,11 +47,6 @@ The notebook uses conservative settings to stay stable on Colab:
 If model loading consumes all system RAM, keep `LOW_CPU_MEMORY_LOAD=True` in
 cell 4 on A100/L4-class runtimes. On T4, use `facebook/sam-audio-small`. If you
 get a GPU memory error during separation, lower `CHUNK_SECONDS` to 10.
-
-If Hugging Face returns `401 Unauthorized` even after access was granted in the
-browser, the token used by Colab is usually from a different account or an old
-Colab Secret. In cell 2, keep `HF_TOKEN_SOURCE=interactive_login` and paste a
-fresh read token from the same Hugging Face account that has model access.
 
 ## Upstream Repository
 
